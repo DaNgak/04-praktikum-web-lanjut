@@ -71,39 +71,20 @@
                 <div class="col-xs-12">
                     <div class="tm-contact-related-posts-container">
                         <h3 class="tm-gold-text tm-title tm-margin-b-30">Latest Posts</h3>
-                        <div class="row post" style="margin-bottom: 2.5rem" >
-                            <div class="media-left media-middle">
-                                <a href="#">
-                                <img class="media-object" src="assets/img/tm-img-240x120-1.jpg" alt="Generic placeholder image">
-                                </a>
+                        @foreach ($datablog as $datablogsatuan)
+                            <div class="row post" style="margin-bottom: 2.5rem" >
+                                <div class="media-left media-middle">
+                                    <a href="/blog/{{ $datablogsatuan->slug }}">
+                                    <img class="media-object" src="assets/img/tm-img-240x120-1.jpg" alt="Generic placeholder image">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <a href="/blog/{{ $datablogsatuan->slug }}"><h4 class="media-heading tm-gold-text tm-margin-b-15">{{ $datablogsatuan->title }}</h4></a>
+                                    <p class="tm-small-font tm-media-description">{{ $datablogsatuan->content_cover }}</p>
+                                </div>
                             </div>
-                            <div class="media-body">
-                                <a href="#"><h4 class="media-heading tm-gold-text tm-margin-b-15">Lorem ipsum dolor</h4></a>
-                                <p class="tm-small-font tm-media-description">Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p>
-                            </div>
-                        </div>
-                        <div class="row post" style="margin-bottom: 2.5rem" >
-                            <div class="media-left media-middle">
-                                <a href="#">
-                                <img class="media-object" src="assets/img/tm-img-240x120-2.jpg" alt="Generic placeholder image">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <a href="#"><h4 class="media-heading tm-gold-text tm-margin-b-15">Lorem ipsum dolor</h4></a>
-                                <p class="tm-small-font tm-media-description">Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p>
-                            </div>
-                        </div>
-                        <div class="row post" style="margin-bottom: 2.5rem" >
-                            <div class="media-left media-middle">
-                                <a href="#">
-                                <img class="media-object" src="assets/img/tm-img-240x120-3.jpg" alt="Generic placeholder image">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <a href="#"><h4 class="media-heading tm-gold-text tm-margin-b-15">Lorem ipsum dolor</h4></a>
-                                <p class="tm-small-font tm-media-description">Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p>
-                            </div>
-                        </div>
+                        @endforeach
+
                         <div class="row text-center">
                             <a href="{{ url("blog") }}" class="tm-btn text-uppercase">More Post</a>    
                         </div>
