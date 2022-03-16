@@ -74,12 +74,13 @@
                         @foreach ($datablog as $datablogsatuan)
                             <div class="row post" style="margin-bottom: 2.5rem" >
                                 <div class="media-left media-middle">
-                                    <a href="/blog/{{ $datablogsatuan->slug }}">
-                                    <img class="media-object" src="assets/img/tm-img-240x120-1.jpg" alt="Generic placeholder image">
+                                    <a href="{{ url("blog") }}/{{ $datablogsatuan->slug }}">
+                                    <img class="media-object" src="{{ asset("assets/img/$datablogsatuan->image") }}" alt="Generic placeholder image">
                                     </a>
                                 </div>
                                 <div class="media-body">
-                                    <a href="/blog/{{ $datablogsatuan->slug }}"><h4 class="media-heading tm-gold-text tm-margin-b-15">{{ $datablogsatuan->title }}</h4></a>
+                                    <a href="{{ url("blog") }}/{{ $datablogsatuan->slug }}"><h4 class="media-heading tm-gold-text tm-margin-b-15">{{ $datablogsatuan->title }}</h4></a>
+                                    <p>Created by <a href="#">{{ $datablogsatuan->author }}</a> | Category <a href="/category/{{ $datablogsatuan->category->slug }}">{{ $datablogsatuan->category->name }}</a></p>
                                     <p class="tm-small-font tm-media-description">{{ $datablogsatuan->content_cover }}</p>
                                 </div>
                             </div>

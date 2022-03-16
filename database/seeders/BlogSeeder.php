@@ -17,6 +17,7 @@ class BlogSeeder extends Seeder
         DB::table('blogs')->insert([
             [
                 "title" => "Judul Blog Satu 111",
+                "image" => "tm-img-310x180-1.jpg",
                 "slug" => "judul-blog-satu",
                 "author" => "Aldi Dwi Kusuma",
                 "content_cover" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus eius laborum dicta adipisci porro consectetur.",
@@ -25,6 +26,7 @@ class BlogSeeder extends Seeder
             ],
             [
                 "title" => "Judul Blog Dua 222",
+                "image" => "tm-img-310x180-2.jpg",
                 "slug" => "judul-blog-dua",
                 "author" => "Aria Pratama E",
                 "content_cover" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus eius laborum dicta adipisci porro consectetur.",
@@ -33,6 +35,7 @@ class BlogSeeder extends Seeder
             ],
             [
                 "title" => "Judul Blog Tiga 333",
+                "image" => "tm-img-310x180-3.jpg",
                 "slug" => "judul-blog-tiga",
                 "author" => "Aripin",
                 "content_cover" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus eius laborum dicta adipisci porro consectetur.",
@@ -41,6 +44,7 @@ class BlogSeeder extends Seeder
             ],
             [
                 "title" => "Judul Blog Empat 444",
+                "image" => "tm-img-310x180-4.jpg",
                 "slug" => "judul-blog-empat",
                 "author" => "Bengak",
                 "content_cover" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus eius laborum dicta adipisci porro consectetur.",

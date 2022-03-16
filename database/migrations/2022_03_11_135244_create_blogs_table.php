@@ -17,6 +17,7 @@ class CreateBlogsTable extends Migration
             $table->id();
             $table->foreignId("category_id");
             $table->string("title");
+            $table->string("image");
             $table->string("slug")->unique();
             $table->string("content_cover");
             $table->text("content");
